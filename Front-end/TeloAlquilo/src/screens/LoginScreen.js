@@ -1,20 +1,24 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { View, Button, TextInput } from "react-native";
 
 export default function LoginScreen(props) {
-    const { Navigation } = props;
+    const { navigation } = props;
 
     const goToRegister = () => {
         navigation.navigate("Register");
     };
 
+    const goToPassword = () => {
+        navigation.navigate("Password")
+    };
+
     return (
     <View>
-        <Text>LoginScreen</Text>
-        <Text>LoginScreen</Text>
-        <Text>LoginScreen</Text>
-        <Text>LoginScreen</Text>
+        <TextInput placeholder="Email" />
+        <TextInput placeholder="Password" />
+        <Button title="Ingresar" onPress={() => console.log("Ingreso")} />
         <Button onPress={goToRegister} title="Register" />
+        <Button onPress={goToPassword} title="Forgot Your Password?" />
     </View>
     );
 }
