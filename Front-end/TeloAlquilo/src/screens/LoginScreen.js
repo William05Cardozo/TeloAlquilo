@@ -11,12 +11,16 @@ export default function LoginScreen(props) {
     const goToPassword = () => {
         navigation.navigate("Password")
     };
+    
+    const goToInterfaz = () => {
+        navigation.navigate("Interfaz");
+    }
 
     return (
     <View>
         <TextInput placeholder="Email" />
         <TextInput placeholder="Password" />
-        <Button title="Ingresar" onPress={() => console.log("Ingreso")} />
+        <Button onPress={goToInterfaz} title="Login" />
         <Button onPress={goToRegister} title="Register" />
         <Button onPress={goToPassword} title="Forgot Your Password?" />
     </View>

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Button } from "react-native";
 
 export default function PasswordScreen() {
     return (
@@ -7,6 +7,7 @@ export default function PasswordScreen() {
         <Text>Hola</Text>
         <Text>Hola</Text>
         <Text>Hola</Text>
+        <Button title="Send" />
     </View>
     );
 }
