@@ -14,6 +14,7 @@ export default function RegisterScreen(props) {
         <TextInput placeholder="Last Name" />
         <TextInput placeholder="Email" />
         <TextInput placeholder="Password" />
+        <TextInput placeholder="Confirm password" />
         <Button onPress={goToProfile} title="Sign Up" />
     </View>
     );

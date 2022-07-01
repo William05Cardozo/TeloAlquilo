@@ -14,7 +14,11 @@ export default function LoginScreen(props) {
     
     const goToInterfaz = () => {
         navigation.navigate("Interfaz");
-    }
+    };
+
+    const goToSelection = () => {
+        navigation.navigate("Selection");
+    };
 
     return (
     <View>
@@ -23,6 +27,7 @@ export default function LoginScreen(props) {
         <Button onPress={goToInterfaz} title="Login" />
         <Button onPress={goToRegister} title="Register" />
         <Button onPress={goToPassword} title="Forgot Your Password?" />
+        <Button onPress={goToSelection} title="SelectionHouse" />
     </View>
     );
 }
