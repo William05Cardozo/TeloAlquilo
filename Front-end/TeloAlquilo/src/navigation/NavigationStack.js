@@ -13,10 +13,10 @@ export default function NavigationStack() {
     return (
     <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Register" component={RegisterScreen} />
-        <Stack.Screen name="Password" component={PasswordScreen} />
         <Stack.Screen name="Profile" component={ProfileScreen} />
         <Stack.Screen name="Interfaz" component={InterfazHouseScreen} />
+        <Stack.Screen name="Register" component={RegisterScreen} />
+        <Stack.Screen name="Password" component={PasswordScreen} />
         <Stack.Screen name="Selection" component={SelectHouseScreen} />
     </Stack.Navigator>
     );
