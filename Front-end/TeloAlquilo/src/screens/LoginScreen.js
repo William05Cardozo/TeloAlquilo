@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Button, TextInput, StyleSheet, Image } from "react-native";
+import { View, Button, TextInput, StyleSheet, TouchableOpacity, Text, Image } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
@@ -25,23 +25,24 @@ export default function LoginScreen(props) {
     return (
     <View  style={styles.container}>
         <Image
-        source={{ uri: 'assets:/House.png' }}
-        style={{ width: 400, height: 40 }} />
+            source={require("../../assets/HouseLogin.png")}
+            resizeMode="contain"
+            style={styles.image} />
         <TextInput placeholder="Email" />
-         <Icon
-         name="user"
-         color="#000"
-         size={15} />
         <TextInput placeholder="Password" />
-        <Icon
-        name="lock"
-        color="#000"
-        size={15} />
-        <Button onPress={goToInterfaz} title="Login" />
-        <Button onPress={goToRegister} title="Register" />
-        <Button onPress={goToPassword} title="Forgot Your Password?" />
-        <Button onPress={goToSelection} title="SelectionHouse" />
-        <Button onPress={goToInterfaz} title="Im Looking" />
+        <TouchableOpacity style={styles.Button} onPress={goToInterfaz}>
+            <Text style={styles.textButton}>Login</Text>
+        </TouchableOpacity>
+        <Text>Don't have an account?
+            <TouchableOpacity onPress={goToRegister}>
+                <Text> Register</Text>
+            </TouchableOpacity> </Text>
+        <TouchableOpacity onPress={goToPassword}>
+            <Text>Forgot you password?</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={goToInterfaz}>
+            <Text>Im Looking</Text>
+        </TouchableOpacity>
     </View>
     );
 }
@@ -53,4 +54,19 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
+    Button: {
+        backgroundColor: 'black',
+        borderRadius: 30,
+        paddingVertical: 10,
+        paddingHorizontal: 30,
+      },
+      textButton: {
+        color: 'white'
+      },
+      image: {
+        height: 200,
+        width: "100%",
+        marginBottom: 10,
+        textAlign: "center"
+      }
   });
