@@ -1,13 +1,14 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import ProfileScreen from "../screens/ProfileScreen";
+import InterfazHouseScreen from "../screens/InterfazHouseScreen";
+
 
 const Drawer = createDrawerNavigator();
 
 export default function NavigationDrawer() {
     return (
         <Drawer.Navigator>
-            <Drawer.Screen name="MyProfile" component={ProfileScreen} />
+            <Drawer.Screen name="Interfaz" component={InterfazHouseScreen} />
         </Drawer.Navigator>
-    )
+    );
 }
