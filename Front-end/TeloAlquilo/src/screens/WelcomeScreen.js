@@ -19,12 +19,12 @@ export default function WelcomeScrenn(props) {
             source={require("../../assets/House.png")}
             resizeMode="contain"
             style={styles.image} />
-            <Text style={styles.textStyle}>Bienvenido a TeloAlquilo, tu app de arriendo o compra de casa.</Text>
+            <Text>Bienvenido a TeloAlquilo, tu app de arriendo o compra de casa.</Text>
             <Text>Que deseas hacer?</Text>
-            <TouchableOpacity onPress={goToInterfaz}>
-                <Text>MIRAR CASAS</Text></TouchableOpacity>
-            <TouchableOpacity onPress={goToLogin}>
-                <Text>Publicar Casa</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.TouchStyle} onPress={goToInterfaz}>
+                <Text style={styles.textStyle}>Mirar Casas</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.TouchStyle} onPress={goToLogin}>
+                <Text style={styles.textStyle}>Publicar Casa</Text></TouchableOpacity>
         </View>
     );
 }
@@ -44,5 +44,15 @@ const styles = StyleSheet.create({
       },
       textStyle: {
         marginTop: 10,
+        color: "mediumblue",
+        marginBottom: 8,
+      },
+      TouchStyle: {
+        borderWidth: 2,
+        borderRadius: 30,
+        paddingVertical: 1,
+        paddingHorizontal: 5,
+        marginTop: 4,
+        marginBottom: 4,
       },
   });

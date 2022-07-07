@@ -1,5 +1,5 @@
 import React from "react";
-import { View, TextInput, Button, StyleSheet, TouchableOpacity, Text } from "react-native";
+import { View, TextInput, StyleSheet, TouchableOpacity, Text, Image } from "react-native";
 
 export default function PasswordScreen(props) {
     const { navigation } = props;
@@ -9,8 +9,14 @@ export default function PasswordScreen(props) {
     }
     return (
     <View style={styles.container}>
-        <TextInput placeholder="Write your email" />
-        <Button onPress={goToLogin} title="Send" />
+        <Image
+        source={require("../../assets/Password.png")}
+        resizeMode="contain"
+        style={styles.image} />        
+        <TextInput style={styles.inputStyle} placeholder="Write your email" />
+        <TouchableOpacity style={styles.Button} onPress={goToLogin}>
+            <Text>Send</Text>
+        </TouchableOpacity>
         <Text>You have account?
             <TouchableOpacity onPress={() => console.log("ADD")}>
                 <Text> Sign Up</Text>
@@ -32,5 +38,22 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         paddingVertical: 10,
         paddingHorizontal: 20,
+        marginTop: 4,
+        marginBottom: 4,
+       
     },
+    image: {
+        height: 200,
+        width: "100%",
+        marginBottom: 10,
+        textAlign: "center"
+      },
+      inputStyle: {
+        borderWidth: 2,
+        borderRadius: 30,
+        paddingVertical: 10,
+        paddingHorizontal: 30,
+        marginTop: 4,
+        marginBottom: 4,
+      },
 });

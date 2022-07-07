@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Button, TextInput, StyleSheet, TouchableOpacity, Text, Image } from "react-native";
+import { View, TextInput, StyleSheet, TouchableOpacity, Text, Image } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
@@ -28,8 +28,9 @@ export default function LoginScreen(props) {
             source={require("../../assets/HouseLogin.png")}
             resizeMode="contain"
             style={styles.image} />
-        <TextInput placeholder="Email" />
-        <TextInput placeholder="Password" />
+        <TextInput style={styles.inputStyle} placeholder="Email" />
+        <TextInput style={styles.inputStyle} secureTextEntry={true} password={true}
+        placeholder="Password" />
         <TouchableOpacity style={styles.Button} onPress={goToInterfaz}>
             <Text style={styles.textButton}>Login</Text>
         </TouchableOpacity>
@@ -39,9 +40,6 @@ export default function LoginScreen(props) {
             </TouchableOpacity> </Text>
         <TouchableOpacity onPress={goToPassword}>
             <Text>Forgot you password?</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={goToInterfaz}>
-            <Text>Im Looking</Text>
         </TouchableOpacity>
     </View>
     );
@@ -59,6 +57,8 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         paddingVertical: 10,
         paddingHorizontal: 30,
+        marginTop: 4,
+        marginBottom: 4,
       },
       textButton: {
         color: 'white'
@@ -68,5 +68,13 @@ const styles = StyleSheet.create({
         width: "100%",
         marginBottom: 10,
         textAlign: "center"
-      }
+      },
+      inputStyle: {
+        borderWidth: 2,
+        borderRadius: 30,
+        paddingVertical: 10,
+        paddingHorizontal: 30,
+        marginTop: 4,
+        marginBottom: 4,
+      },
   });

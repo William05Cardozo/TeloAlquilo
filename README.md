@@ -1,4 +1,5 @@
 # Capstone Project
+<<<<<<< HEAD
 ## TeloAlquilo APP
 
 TeloAlquilo is an app created by WAS Code in which its main function is the rental and purchase of real estate, we focus on generating a good performance, a friendly and easy to use app, a more optimal communication with landlords.
@@ -34,3 +35,5 @@ Andres Cataño [link](https://github.com/andrescatagno): Back-End Dev.
 Sebastian Rengifo [link](https://github.com/sebasrengi): DevOps Dev.
 
 These roles were distributed according to what we wanted to learn and what we felt more comfortable with.
+=======
+>>>>>>> 065f9c7485e6445ffe45fc7af124c306751908be
